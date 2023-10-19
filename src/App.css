@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: myCustomFontRegular;
+  src: url("./fonts/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: myCustomFontExtraBold;
+  src: url("./fonts/static/Inter-ExtraBold.ttf");
+}
+
+img {
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: myCustomFontExtraBold;
+}
+
+body {
+  font-family: myCustomFontRegular;
+  margin: 0;
+  background-color: #fefdf9;
+}
+
+/* for closing overflow in responsive mode need this wrapper first */
+.container {
+  position: relative;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+.overlay {
+  display: none;
+
+  background-color: hsl(0, 0%, 0%, 0.6);
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.menu.active {
+  transform: translateX(0);
+}
+
+@media (min-width: 1121px) {
+  .container {
+    max-width: 65%;
+    margin-inline: auto;
+  }
+
+  .home-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
