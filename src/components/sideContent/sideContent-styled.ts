@@ -26,6 +26,11 @@ export const CardContentLayout = styled.div`
     margin-top: 0;
     margin-bottom: 0.5rem;
     color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      color: #e7b263;
+    }
   }
 
   > span {

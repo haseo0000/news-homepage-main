@@ -4,16 +4,20 @@ import Home from "./pages/home";
 
 function App() {
   return (
-    <div className="container">
-      <header>
-        <Header />
-      </header>
-      <main>
-        <div className="home-layout">
-          <Home />
-        </div>
-      </main>
-    </div>
+    <>
+      {/* for closing overflow in responsive mode need this wrapper first */}
+
+      <div className="container">
+        <header>
+          <Header />
+        </header>
+        <main>
+          <div className="home-layout">
+            <Home />
+          </div>
+        </main>
+      </div>
+    </>
   );
 }
 

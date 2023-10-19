@@ -33,6 +33,11 @@ export const DetailsLayout = styled.div`
   > h3 {
     font-size: 1.25em;
     margin: 0;
+    cursor: pointer;
+
+    &:hover {
+      color: #da6a62;
+    }
   }
 
   > span {

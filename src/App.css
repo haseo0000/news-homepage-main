@@ -37,10 +37,21 @@ body {
   background-color: #fefdf9;
 }
 
-/* for closing overflow in responsive mode need this wrapper first */
+header {
+  padding: 1rem;
+  background: #fefdf9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+main {
+  margin-top: 4.25rem;
+}
+
 .container {
-  position: relative;
-  overflow-x: hidden;
   padding: 1rem;
 }
 
@@ -56,15 +67,15 @@ body {
   left: 0;
 }
 
-body.active {
+body.activeSideMenu {
   overflow: hidden;
 }
 
-.overlay.active {
+.overlay.activeSideMenu {
   display: block;
 }
 
-.menu.active {
+.menu.activeSideMenu {
   transform: translateX(0);
 }
 
@@ -72,11 +83,21 @@ body.active {
   .container {
     max-width: 65%;
     margin-inline: auto;
+
+    padding-top: 0;
   }
 
   .home-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
+  }
+
+  header {
+    position: sticky;
+  }
+
+  main {
+    margin-top: 1rem;
   }
 }

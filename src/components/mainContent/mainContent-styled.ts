@@ -4,8 +4,6 @@ export const MainContentLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
 
-  margin-top: 2rem;
-
   @media (min-width: 1121px) {
     grid-column: 1 / 2;
 
@@ -53,4 +51,8 @@ export const ButtonContentLayout = styled.button`
   letter-spacing: 3px;
 
   justify-self: flex-start;
+
+  &:hover {
+    background: #00001a;
+  }
 `;

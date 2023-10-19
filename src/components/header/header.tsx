@@ -10,12 +10,12 @@ function Header() {
     const overlay = document.querySelector(".overlay");
     const menu = document.querySelector(".menu");
 
-    body!.classList.toggle("active");
-    menu!.classList.toggle("active");
-    overlay!.classList.toggle("active");
+    body!.classList.toggle("activeSideMenu");
+    menu!.classList.toggle("activeSideMenu");
+    overlay!.classList.toggle("activeSideMenu");
 
     // if (menu instanceof HTMLElement) {
-    //   menu.classList.toggle("active");
+    //   menu.classList.toggle("activeSideMenu");
     // }
   };
 
@@ -27,7 +27,7 @@ function Header() {
           <img src={Logo} alt="Logo" width={"100%"} />
         </ImageLayout>
         <Menu handleShowMenu={handleShowMenu} />
-        <ImageLayout onClick={() => handleShowMenu()}>
+        <ImageLayout className="menuIcon" onClick={() => handleShowMenu()}>
           <img src={MenuIcon} width={"100%"} alt="MenuIcon" />
         </ImageLayout>
       </HeaderLayout>

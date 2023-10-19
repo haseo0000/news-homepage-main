@@ -22,12 +22,17 @@ export const MenuLayout = styled.div`
   }
 `;
 
-export const MenuList = styled.div`
+export const MenuList = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 
   margin-top: 5rem;
+  cursor: pointer;
+
+  & > span:hover {
+    color: #e79895;
+  }
 
   @media (min-width: 1121px) {
     flex-direction: row;
