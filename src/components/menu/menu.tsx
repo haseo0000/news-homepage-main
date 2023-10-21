@@ -6,6 +6,8 @@ type Props = {
   handleShowMenu: () => void;
 };
 
+const MENUS: string[] = ["Home", "New", "Popular", "Trending", "Categories"];
+
 function Menu({ handleShowMenu }: Props) {
   return (
     <MenuLayout className="menu">
@@ -13,11 +15,9 @@ function Menu({ handleShowMenu }: Props) {
         <img src={CloseIcon} alt="CloseIcon" onClick={() => handleShowMenu()} />
       </CloseIconLayout>
       <MenuList>
-        <span>Home</span>
-        <span>New</span>
-        <span>Popular</span>
-        <span>Trending</span>
-        <span>Categories</span>
+        {MENUS.map((menu) => (
+          <span>{menu}</span>
+        ))}
       </MenuList>
     </MenuLayout>
   );

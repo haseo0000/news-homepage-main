@@ -6,15 +6,12 @@ function App() {
   return (
     <>
       {/* for closing overflow in responsive mode need this wrapper first */}
-
       <div className="container">
         <header>
           <Header />
         </header>
         <main>
-          <div className="home-layout">
-            <Home />
-          </div>
+          <Home />
         </main>
       </div>
     </>

@@ -1,29 +1,19 @@
 import { SideContentLayout, CardContentLayout, Line } from "./sideContent-styled";
+import { sideItems } from "../../mockData/sideItems";
 
 function SideContent() {
   return (
     <SideContentLayout>
       <h2>New</h2>
-      <CardContentLayout>
-        <h3>Hydrogen VS Electric Cars</h3>
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sequi ex
-        </span>
-      </CardContentLayout>
-      <Line />
-      <CardContentLayout>
-        <h3>The DonwSides of AI Artistry</h3>
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sequi ex
-        </span>
-      </CardContentLayout>
-      <Line />
-      <CardContentLayout>
-        <h3>Is VS Funding Drying Up?</h3>
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sequi ex
-        </span>
-      </CardContentLayout>
+      {sideItems.map((item, idx) => (
+        <div key={item.id}>
+          <CardContentLayout>
+            <h3>{item.title}</h3>
+            <span>{item.subTitle}</span>
+          </CardContentLayout>
+          {idx !== sideItems.length - 1 && <Line />}
+        </div>
+      ))}
     </SideContentLayout>
   );
 }

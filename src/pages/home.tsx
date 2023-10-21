@@ -4,11 +4,11 @@ import SideContent from "../components/sideContent/sideContent";
 
 function Home() {
   return (
-    <>
+    <div className="home-layout">
       <MainContent />
       <SideContent />
       <ItemsContent />
-    </>
+    </div>
   );
 }
 
