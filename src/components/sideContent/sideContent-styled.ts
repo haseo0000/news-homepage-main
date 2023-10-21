@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const SideContentLayout = styled.div`
   display: grid;
   padding: 1.25rem;
-  margin-top: 3rem;
 
   background: #00001a;
 
@@ -15,7 +14,7 @@ export const SideContentLayout = styled.div`
   }
 
   @media (min-width: 1121px) {
-    grid-column: 2 / -1;
+    grid-column: 3 / -1;
     margin-top: 0;
   }
 `;

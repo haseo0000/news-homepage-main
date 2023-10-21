@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 export const ItemsContentLayout = styled.div`
-  margin-top: 3rem;
-
   display: grid;
   gap: 2rem;
 
   @media (min-width: 1121px) {
     grid-column: 1 / -1;
+    grid-template-columns: subgrid;
 
-    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2rem;
   }
 `;
 

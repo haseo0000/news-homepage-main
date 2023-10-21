@@ -5,11 +5,9 @@ export const MainContentLayout = styled.div`
   grid-template-columns: 1fr;
 
   @media (min-width: 1121px) {
-    grid-column: 1 / 2;
-
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 0;
+    grid-column: 1 / 3;
+    grid-template-columns: subgrid;
+    row-gap: 2rem;
   }
 `;
 
